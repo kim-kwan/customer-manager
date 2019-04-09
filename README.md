@@ -1,7 +1,7 @@
 react.js 로 만든 고객관리시스템 프로젝트 
 
 ----------------------------------------------------------------------
-npx create-react-app customer-manager
+npx create-react-app customer-manager ( react v16.8.6 )
 
 - 고객 데이터 관리 DB 는 Firebase - Google(Realtimebase) 사용
 - axios 를 이용, firebase 에 CRUD 를 api 로 만들어 사용 ( store.js )
