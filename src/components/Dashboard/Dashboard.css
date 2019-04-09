@@ -1,0 +1,12 @@
+.dashBoard{
+  position: relative;
+  margin-left:260px;
+  transition: all .5s;
+}
+
+@media (max-width:900px){
+  .dashBoard{
+    margin-left:0px;
+    transition: all .5s;
+  }
+}

@@ -1,0 +1,99 @@
+nav{
+  position: fixed;
+  left:0;
+  top:0;
+  width:220px;
+  height: 100vh;
+  box-shadow: 2px 0px 8px #111;
+  padding: 10px;
+  z-index: 9999;
+  transition: all .5s;
+  background: linear-gradient(rgb(70, 0, 184), rgb(0, 161, 153))
+  /* background: url('https://source.unsplash.com/random') center no-repeat ;
+  background-size:cover; */
+}
+
+nav .navContainer{
+  padding:5% 5% 3%;
+  margin-top:30px;
+  border-radius: 10px;
+}
+nav .navContainer .logo{
+  position: relative;
+  margin-top:10px;
+  font-size: 24px;
+  white-space: nowrap;
+}
+nav .navContainer .logo div {
+  display: inline-block;
+}
+
+nav .navContainer .fa-user-cog{
+  margin-right: 10px;
+}
+nav .navContainer .menu{
+  position: relative;
+}
+nav .navContainer ul li{
+  margin-top:10px;
+  font-size: 18px;
+} 
+nav .navContainer .fas{
+  margin-left:5px;
+}
+
+nav .navClose{
+  display: none;
+  font-size:32px;
+  color: #fff;
+  position: absolute;
+  top:1%;
+  right:5%;
+  cursor: pointer;
+}
+
+.navShow{
+  display: block;
+}
+
+.navHide{
+  display: block;
+}
+
+.menuBar{
+  display: block;
+  position: fixed;
+  top:1%;
+  left:1%;
+  font-size:32px;
+  cursor: pointer;
+  z-index: 9998;
+}
+
+@media ( max-width:900px ){
+  nav{
+    /* display: none; */
+    width: 150px;
+    transition: all .5s;
+  }
+  nav .navContainer {
+    padding: 1%;
+  }
+  nav .navContainer .logo{
+    text-align: center;
+    font-size:18px;
+  }
+
+  nav .navContainer ul li{
+    font-size:16px;
+  }
+
+  nav .navClose{
+    display: block;
+  }
+
+  .navHide{
+    display: none;
+  }
+ 
+}
