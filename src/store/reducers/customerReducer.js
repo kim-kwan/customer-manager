@@ -5,7 +5,7 @@ const initState = {
   searchList : [],
 }
 
-const getReducer = (state = initState , action) => {
+const customerReducer = (state = initState , action) => {
   switch(action.type){
     case types.GET_CUSTOMERS :
       // console.log('GET_CUSTOMER');
@@ -64,4 +64,4 @@ const getReducer = (state = initState , action) => {
   }
 }
 
-export default getReducer
+export default customerReducer
