@@ -13,7 +13,6 @@ class CustomerDetail extends React.Component{
   }
   
   handleChange = (e) => {
-    console.log(e.target.value)
     this.setState({
       customerDetail : {
         ...this.state.customerDetail,

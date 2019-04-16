@@ -5,6 +5,7 @@ export const ADD_CUSTOMER = 'ADD_CUSTOMER'
 export const EDIT_CUSTOMER = 'EDIT_CUSTOMER'
 export const DELETE_CUSTOMER = 'DELETE_CUSTOMER'
 export const SEARCH_CUSTOMERS = 'SEARCH_CUSTOMERS'
+export const SCROLLED_CUSTOMERS = 'SCROLLED_CUSTOMERS'
 
 export const getCustomers = () => {
   // console.log('action')
@@ -70,5 +71,11 @@ export const editCustomer = (editCustomer) => {
 export const searchCustomer = (keyword) => {
   return(dispatch) => {
     dispatch({type : SEARCH_CUSTOMERS, keyword})
+  }
+}
+
+export const scrolledCustomers = () => {
+  return(dispatch) => {
+    dispatch({type : SCROLLED_CUSTOMERS})
   }
 }

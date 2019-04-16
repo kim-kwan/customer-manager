@@ -12,6 +12,7 @@ class SearchCustomer extends React.Component{
     }, () => {
       this.props.searchCustomer(this.state.keyword)
     })
+
   }
   render(){
     return(
@@ -20,7 +21,7 @@ class SearchCustomer extends React.Component{
           type="text"
           placeholder="이름으로 고객 찾기 " 
           value={this.state.keyword}
-          onChange={this.handleChange}
+          onChange={(e)=>{this.handleChange(e)}}
         />
         <i className="fas fa-search" onClick={this.handleChange}></i>
       </div>

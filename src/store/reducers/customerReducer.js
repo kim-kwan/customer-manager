@@ -1,18 +1,22 @@
 import * as types from '../actions/customerActions'
 
 const initState = {
+  preItem : 0 ,
+  getItem : 10 ,
+  keyword : '',
   customerList : [],
-  searchList : [],
+  searchList : []
 }
 
 const customerReducer = (state = initState , action) => {
   switch(action.type){
     case types.GET_CUSTOMERS :
       // console.log('GET_CUSTOMER');
+      let result = action.list.slice(state.preItem , state.getItem)
       return {
         ...state,
         customerList : action.list,
-        searchList : action.list
+        searchList : result
       }
 
     case types.ADD_CUSTOMER :
@@ -50,14 +54,30 @@ const customerReducer = (state = initState , action) => {
       }
       
     case types.SEARCH_CUSTOMERS : 
-      // console.log(action.keyword)
-      const searchData = state.customerList.filter( data => {
+      let getInit = 10;
+      let searchData = state.customerList.filter( data => {
         return data.name.indexOf(action.keyword) > -1 ;
       })
+      searchData = searchData.slice(state.preItem, getInit)
       return{
         ...state,
+        getItem : getInit,
+        keyword : action.keyword,
         searchList : searchData
       }
+
+    case types.SCROLLED_CUSTOMERS : 
+      let get = state.getItem + 10 ;
+      let scrolledData = state.customerList.filter( data => {
+        return data.name.indexOf(state.keyword) > -1 ;
+      })
+      scrolledData = scrolledData.slice( state.preItem , get)
+      return{
+        ...state,
+        getItem : get,
+        searchList : scrolledData
+      }
+
     default :
       return state
 
