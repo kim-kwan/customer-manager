@@ -7,7 +7,9 @@ npx create-react-app customer-manager ( react v16.8.6 )
 
 - axios 를 이용, firebase 에 CRUD 를 api 로 만들어 사용 ( store.js )
 
-- redux 를 사용해서 고객데이터 상태관리 처리 (redux , react-redux)
+- redux 를 사용해 고객데이터 상태관리 처리 (redux , react-redux)
+
+- window scroll 이벤트 와 redux 를 사용해 무한롤링 방식 데이터 출력
 
 - css , google font , fontawesome 사용한 UI개발 (반응형,mobile)
 
